@@ -1,0 +1,20 @@
+<form style="padding-left: 30px;">
+  <div style="width: 18rem;">
+    <label for = "destinatario" class="form-label fw-bold">Inserisci la mail del destinatario: </label>
+    <input class="form-control" name = "destinatario" #dest>
+  </div>
+  <div style="width: 18rem;">
+    <label for = "oggetto" class="form-label fw-bold">Inserisci l'oggetto della mail: </label>
+    <input class="form-control" name = "oggetto" #ogg>
+  </div>
+  <div style="width: 18rem;">
+    <label for = "corpo" class="form-label fw-bold">Inserisci il corpo della mail: </label>
+    <input class="form-control" name = "corpo" #corp>
+  </div>
+  <br>
+  <div>
+    <button (click) = "invia()" class="btn btn-primary">
+      Invia
+    </button>
+  </div>
+</form>
