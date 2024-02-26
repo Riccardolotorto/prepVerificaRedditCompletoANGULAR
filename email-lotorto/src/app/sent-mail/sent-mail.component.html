@@ -1,3 +1,5 @@
-<p class="fw-bold" *ngFor = "let mail of mails">{{mail.destinatario}}</p>
-<p class="fw-bold" *ngFor = "let mail of mails">{{mail.oggetto}}</p>
-<p class="fw-bold" *ngFor = "let mail of mails">{{mail.corpo}}</p>
+<p class="fw-bold" *ngFor = "let mail of mails">{{mail.destinatario}} - {{mail.oggetto}}</p>
+<!--<button (click) = "espandi()" class="btn btn-warning">
+    Espandi
+</button>
+<p class="fw-bold" *ngFor = "let mail of mails">{{mail.corpo}}</p>-->

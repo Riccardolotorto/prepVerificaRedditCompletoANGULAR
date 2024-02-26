@@ -8,4 +8,7 @@ import { Email } from '../email.model';
 })
 export class SentMailComponent {
   @Input() mails: Email[];
+  espandi() {
+    
+  }
 }
