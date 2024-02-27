@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, ViewChild} from '@angular/core';
 import { Email } from '../email.model';
 
 @Component({
@@ -8,7 +8,8 @@ import { Email } from '../email.model';
 })
 export class SentMailComponent {
   @Input() mails: Email[];
-  espandi() {
-    
+  mostraTemplate: boolean = false;
+  espandi() : void{
+    this.mostraTemplate = true;
   }
 }
