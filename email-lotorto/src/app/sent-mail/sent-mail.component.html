@@ -1,4 +1,4 @@
-<p class="fw-bold" *ngFor = "let mail of mails">{{mail.destinatario}} - {{mail.oggetto}}</p>
+<!--<p class="fw-bold" *ngFor = "let mail of mails">{{mail.destinatario}} - {{mail.oggetto}}</p>
 <div *ngIf="mostraTemplate">
     <p class="fw-bold" *ngFor = "let mail of mails">{{mail.corpo}}</p>
 </div>
@@ -8,3 +8,20 @@
 <button (click) = "chiudi()" class="btn btn-warning" style="margin: 10px;">
     Chiudi
 </button>
+<br>
+<br>
+<button (click) = "speciale()" class="btn btn-warning">
+    Speciale
+</button>-->
+<div>
+    <div class="card-body">
+      <h5 class="card-title" *ngFor = "let mail of mails">{{mail.destinatario}} | {{mail.oggetto}}</h5> 
+      <div *ngIf = 'nascondi' >
+        <p *ngFor = "let mail of mails" class="card-text" >{{mail.corpo}}</p>
+      </div>
+      <a *ngIf = '!(nascondi)' class="btn btn-primary" (click) = 'espandi()'>Espandi</a>  <!--se nascondi è false allora espando-->
+      <a *ngIf = 'nascondi' class="btn btn-primary" (click) = 'espandi()'>Chiudi</a> <!--se nascondi è true allora nascondo-->
+      <a *ngIf = 'nascondi' class="btn btn-warning mx-2 border-secondary" (click) = 'speciale()'>Speciale</a> <!--se nascondi è true mostro il bottone e se lo clicco lo sfondo diventa giallo-->
+    </div>
+</div>
+
