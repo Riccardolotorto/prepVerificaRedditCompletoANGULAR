@@ -12,4 +12,7 @@ export class SentMailComponent {
   espandi() : void{
     this.mostraTemplate = true;
   }
+  chiudi() : void {
+    this.mostraTemplate = false;
+  }
 }
