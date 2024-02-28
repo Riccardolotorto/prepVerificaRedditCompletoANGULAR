@@ -1,9 +1,12 @@
 <div>
-    <p *ngFor = "let mail of mails" class="fw-bold">{{mail.destinatario}} | {{mail.oggetto}}</p>
-    <div *ngIf="nascondi">
+    <div class="card-title">
+        <p *ngFor = "let mail of mails" class="fw-bold">{{mail.destinatario}} | {{mail.oggetto}}</p>
+    </div>
+    <div *ngIf="nascondi" class="card-body">
         <p *ngFor = "let mail of mails" class="fw-bold">{{mail.corpo}}</p>
     </div>
     <button *ngIf="!(nascondi)" class="btn btn-secondary" (click) = "espandi()">Espandi</button>
     <button *ngIf="nascondi" class="btn btn-secondary" (click) = "espandi()">Chiudi</button>
+    <button *ngIf="nascondi" class="btn btn-secondary" (click) = "speciale()">speciale</button>
 </div> 
 
