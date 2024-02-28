@@ -15,9 +15,9 @@ export class SentMailComponent {
     return false
   }
   speciale(): boolean {
-    if(this.cssClass = "card bg-warning mt-3") {
+    if(this.cssClass == "card bg-warning mt-3") {
       this.cssClass = "card bg-light mt-3";
-    } if (this.cssClass = "card bg-light mt-3") {
+    } else {
       this.cssClass = "card bg-warning mt-3";
     }
     return false
