@@ -6,5 +6,9 @@
   <label for="oggetto">oggetto</label><br>
 
   <input name = "corpo" type="text" #corpo>
-  <label for="corpo">corpo</label><br>
+  <label for="corpo">corpo</label><br><br>
+
+  <button (click) = "invia(destinatario, oggetto, corpo)">
+    Invia
+  </button>
 </form>
