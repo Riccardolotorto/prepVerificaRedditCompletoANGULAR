@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Email } from './email.model';
-import { withDisabledInitialNavigation } from '@angular/router';
-import { flatMap } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',

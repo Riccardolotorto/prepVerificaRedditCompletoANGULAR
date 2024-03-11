@@ -12,3 +12,7 @@
     Invia
   </button>
 </form>
+
+<div *ngFor="let ciccio of emails" style="margin:30px">
+  <app-sent-mail [mail] = "ciccio"></app-sent-mail>
+</div>
