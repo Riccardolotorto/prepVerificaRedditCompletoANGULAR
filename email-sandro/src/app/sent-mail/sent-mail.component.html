@@ -1,3 +1,8 @@
 <p>{{mail.destinatario}}</p>
 <p>{{mail.oggetto}}</p>
-<p>{{mail.corpo}}</p>
+<div *ngIf="(nascondi)">
+    <p>{{mail.corpo}}</p>
+</div>
+<button *ngIf="!(nascondi)" (click)="espandi()">Espandi</button>
+<button *ngIf="(nascondi)" (click)="espandi()">Chiudi</button>
+
