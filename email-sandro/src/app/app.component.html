@@ -1,18 +1,18 @@
 <form style = "margin:30px;">
-  <input name = "destinatario" type="text" #destinatario>
-  <label for="destinatario">A</label><br>
+  <input name = "destinatario" type="text" #destinatario class="form-control">
+  <label for="destinatario" class="form-label">A</label><br>
 
-  <input name = "oggetto" type="text" #oggetto>
-  <label for="oggetto">oggetto</label><br>
+  <input name = "oggetto" type="text" #oggetto class="form-control">
+  <label for="oggetto" class="form-label">oggetto</label><br>
 
-  <input name = "corpo" type="text" #corpo>
-  <label for="corpo">corpo</label><br><br>
+  <input name = "corpo" type="text" #corpo class="form-control">
+  <label for="corpo" class="form-label">corpo</label><br><br>
 
-  <button (click) = "invia(destinatario, oggetto, corpo)">
+  <button (click) = "invia(destinatario, oggetto, corpo)" class="btn btn-primary">
     Invia
   </button>
 </form>
 
-<div *ngFor="let ciccio of emails" style="margin:30px">
+<div *ngFor="let ciccio of emails" style="margin:30px" class="fw-bold">
   <app-sent-mail [mail] = "ciccio"></app-sent-mail>
 </div>
