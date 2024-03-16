@@ -12,3 +12,7 @@
     Invia
   </button>
 </form>
+<br>
+<div style="margin: 30px;" *ngFor = "let mail of emails">
+  <app-sent-mail [mailozza] = "mail"></app-sent-mail>
+</div>
