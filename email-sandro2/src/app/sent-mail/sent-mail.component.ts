@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, HostBinding, Input} from '@angular/core';
 import { Email } from '../email.model';
 
 @Component({
@@ -9,8 +9,17 @@ import { Email } from '../email.model';
 export class SentMailComponent {
   @Input() mailozza !: Email;
   nascondi: boolean = false;
+  @HostBinding('attr.class') cssClass = "card bg-light"
   espandi(): boolean {
     this.nascondi = !this.nascondi;
+    return false
+  }
+  speciale():boolean {
+    if (this.cssClass == "card bg-warning") {
+      this.cssClass = "card bg-light";
+    } else {
+      this.cssClass = "card bg-warning";
+    }
     return false
   }
 }
