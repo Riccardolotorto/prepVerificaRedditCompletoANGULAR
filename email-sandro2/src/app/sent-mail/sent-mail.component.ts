@@ -8,4 +8,9 @@ import { Email } from '../email.model';
 })
 export class SentMailComponent {
   @Input() mailozza !: Email;
+  nascondi: boolean = false;
+  espandi(): boolean {
+    this.nascondi = !this.nascondi;
+    return false
+  }
 }
